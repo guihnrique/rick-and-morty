@@ -1,0 +1,58 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body {
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: var(--type-second-bebas-neue), Georgia;
+  font-family: 'Ricky';
+}
+
+.container {
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Ricky';
+  src: url('/fonts/get_schwifty.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-outline-rick {
+  color: #22d3ee; /* Cyan-400 */
+  text-shadow: -2px -2px 0 #000, /* Contorno preto */ 2px -2px 0 #000,
+    -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px greenyellow,
+    /* Brilho amarelo */ 0 0 20px greenyellow, 0 0 30px greenyellow;
+}
+
+/* Efeito espiral animado */
+.spiral-effect {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; /* Bordas arredondadas do card */
+}
+
+.spiral-effect::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url('/images/espiral.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  animation: spin 10s linear infinite; /* Animação de rotação */
+  opacity: 0.8; /* Ajuste de transparência */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
