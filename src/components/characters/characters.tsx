@@ -1,6 +1,7 @@
 import getCharactersInfo from '@/actions/get-characters-info';
 import Image from 'next/image';
 import CharactersInfoBanner from './characters-info-banner';
+import Link from 'next/link';
 
 export default async function Characters({ page }: { page: string }) {
   const { data } = await getCharactersInfo(page);
@@ -32,9 +33,11 @@ export default async function Characters({ page }: { page: string }) {
                   </h2>
                 </div>
                 <div className="py-4 flex justify-center">
-                  <button className="bg-black text-white py-1 px-4 rounded hover:bg-white hover:text-black">
-                    Learn More
-                  </button>
+                  <Link href={`/characters/info?id=${result.id}`}>
+                    <button className="bg-black text-white py-1 px-4 rounded hover:bg-white hover:text-black">
+                      Learn More
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

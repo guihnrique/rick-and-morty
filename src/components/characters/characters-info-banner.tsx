@@ -8,7 +8,7 @@ export default function CharactersInfoBanner({
   data: Character;
   page: string;
 }) {
-  if (page === '' || page === '0') {
+  if (Number(page) < 2 || isNaN(Number(page))) {
     page = '1';
   }
 

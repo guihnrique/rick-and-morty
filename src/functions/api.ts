@@ -6,3 +6,9 @@ export function GET_CHARACTERS(page = '') {
     url: API_URL + `/character?page=${page}`,
   };
 }
+
+export function GET_CHARACTER(id) {
+  return {
+    url: API_URL + `/character/${id}`,
+  };
+}

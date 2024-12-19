@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default async function Header() {
   return (
-    <header className="container text-2xl text-outline-rick">
+    <header className="container text-4xl text-outline-rick">
       <nav className="flex justify-between w-full">
         <Link href={'/'}>
           <Image

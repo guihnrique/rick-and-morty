@@ -1,6 +1,9 @@
 import Link from 'next/link';
 
 export default async function Pagination({ page }: { page: string }) {
+  if (Number(page) < 2 || isNaN(Number(page))) {
+    page = '1';
+  }
   const prevValue = Number(page) - 1;
   const nextValue = Number(page) + 1;
   return (
