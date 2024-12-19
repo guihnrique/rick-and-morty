@@ -1,6 +1,12 @@
 import Link from 'next/link';
 
-export default async function Pagination({ page }: { page: string }) {
+export default async function Pagination({
+  url,
+  page,
+}: {
+  url: string;
+  page: string;
+}) {
   if (Number(page) < 2 || isNaN(Number(page))) {
     page = '1';
   }
@@ -9,13 +15,13 @@ export default async function Pagination({ page }: { page: string }) {
   return (
     <div className="w-full container flex justify-between !mb-8">
       {Number(page) > 1 && (
-        <Link href={`/characters/${prevValue}`}>
+        <Link href={`${url}/${prevValue}`}>
           <button className="rounded-full bg-black w-48 h-20 text-3xl text-outline-rick hover:bg-white">
             Prev
           </button>
         </Link>
       )}
-      <Link href={`/characters/${nextValue}`}>
+      <Link href={`${url}/${nextValue}`}>
         <button className="rounded-full bg-black w-48 h-20 text-3xl text-outline-rick hover:bg-white">
           Next
         </button>

@@ -21,17 +21,16 @@ body {
 }
 
 .text-outline-rick {
-  color: #22d3ee; /* Cyan-400 */
-  text-shadow: -2px -2px 0 #000, /* Contorno preto */ 2px -2px 0 #000,
-    -2px 2px 0 #000, 2px 2px 0 #000, 0 0 10px greenyellow,
-    /* Brilho amarelo */ 0 0 20px greenyellow, 0 0 30px greenyellow;
+  color: #22d3ee;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000,
+    2px 2px 0 #000, 0 0 10px greenyellow, 0 0 20px greenyellow,
+    0 0 30px greenyellow;
 }
 
-/* Efeito espiral animado */
 .spiral-effect {
   position: relative;
   overflow: hidden;
-  border-radius: 12px; /* Bordas arredondadas do card */
+  border-radius: 12px;
 }
 
 .spiral-effect::before {
@@ -44,8 +43,8 @@ body {
   background: url('/images/espiral.png') no-repeat center center;
   background-size: cover;
   z-index: -1;
-  animation: spin 10s linear infinite; /* Animação de rotação */
-  opacity: 0.8; /* Ajuste de transparência */
+  animation: spin 10s linear infinite;
+  opacity: 0.8;
 }
 
 @keyframes spin {

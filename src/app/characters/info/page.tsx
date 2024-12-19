@@ -1,6 +1,6 @@
 import CharacterDescription from '@/components/characters/chacacter-description';
 import { Metadata } from 'next';
-import BackButton from '@/utils/back-button'; // Importando o ClientButton
+import BackButton from '@/utils/back-button';
 
 export const metadata: Metadata = {
   title: 'Characters Info | Ricky and Morty',

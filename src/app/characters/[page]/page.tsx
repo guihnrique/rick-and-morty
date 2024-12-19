@@ -14,7 +14,7 @@ export default async function CharactersPaginationPage({
   return (
     <section className="flex flex-col items-center justify-center container flex-wrap">
       <Characters page={params.page} />
-      <Pagination page={params.page} />
+      <Pagination url={'/characters'} page={params.page} />
     </section>
   );
 }

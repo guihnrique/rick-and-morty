@@ -16,7 +16,7 @@ export default async function Header() {
         </Link>
         <div className="flex space-x-4 items-center">
           <Link href={'/characters'}>Characters</Link>
-          <Link href={'/locais'}>Locais</Link>
+          <Link href={'/locations'}>Locations</Link>
           <Link href={'/episodios'}>Episódios</Link>
         </div>
       </nav>

@@ -27,10 +27,10 @@ export default async function Characters({ page }: { page: string }) {
                 <div className="px-6 py-4 bg-white mt-1 rounded-lg">
                   <h2 className="font-semibold text-gray-800">
                     Name: {result.name}
-                    <p>Status: {result.status}</p>
-                    <p>Species: {result.species}</p>
-                    <p>Gender: {result.gender}</p>
                   </h2>
+                  <p>Status: {result.status}</p>
+                  <p>Species: {result.species}</p>
+                  <p>Gender: {result.gender}</p>
                 </div>
                 <div className="py-4 flex justify-center">
                   <Link href={`/characters/info?id=${result.id}`}>

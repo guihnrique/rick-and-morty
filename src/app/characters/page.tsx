@@ -10,7 +10,7 @@ export default async function CharactersPage() {
   return (
     <section className="flex flex-col items-center justify-center container flex-wrap">
       <Characters page={''} />
-      <Pagination page={'1'} />
+      <Pagination url={'/characters'} page={'1'} />
     </section>
   );
 }
